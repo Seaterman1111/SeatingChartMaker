@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body fills the entire viewport height */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Allows container to expand and fill space */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Adjust the seating chart to use a flexible grid */
+.seating-chart {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive rows */
+  width: 100%;
+  height: 100%;
+}
+
+.seat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-size: 14px;
+  min-width: 100px; /* Minimum size */
+  min-height: 100px; /* Minimum size */
+  overflow: hidden;
+  transition: all 0.3s ease; /* Smooth transition when resizing */
+}
+
+.vip {
+  background-color: #ffeb3b;
+}
+
+.absent {
+  background-color: #f44336;
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: left;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  left: 100%; /* Position to the right of the question mark */
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltiptext ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tooltiptext li {
+  margin: 5px 0;
+}
+
+/* Footer styles */
+footer {
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+}

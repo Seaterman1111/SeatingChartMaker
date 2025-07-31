@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seating Chart App</title>
+    <link rel="stylesheet" href="Seatingchart.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seating Chart
+		<span class="tooltip">?
+                    <span class="tooltiptext">
+					<br><br><br>
+                        This is a little jank, I made it real fast as a project.<br>
+						The seats overflow if you have too many and you can't customize shape either.<br>
+						It does however do what it needs to do, thanks for trying it out<br>
+						-Xander
+                    </span>
+                </span>
+		</h1>
+        
+        <div class="form-group">
+            <label for="length">Number of Rows</label>
+            <input type="number" id="length" min="1" required>
+        </div>
+        <div class="form-group">
+            <label for="width">Number of Columns</label>
+            <input type="number" id="width" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="student-input">Enter Students (one per line)
+                <span class="tooltip">?
+                    <span class="tooltiptext">
+                        Modifiers:
+                        <ul>
+                            <li><strong>Left-Handed</strong>: Seat on the left side.</li>
+                            <li><strong>Front</strong>: Seat in the front row.</li>
+                            <li><strong>Left-Side</strong>: Seat on the left side of the room.</li>
+                            <li><strong>Right-Side</strong>: Seat on the right side of the room.</li>
+                            <li><strong>VIP</strong>: Seat in a prominent position (Mostly Used for Backend Testing).</li>
+                        </ul>
+                    </span>
+                </span>
+            </label>
+            <textarea id="student-input" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="conflict-input">Conflicting Students (comma separated)</label>
+            <textarea id="conflict-input" rows="5" placeholder="Student1, Student2"></textarea>
+        </div>
+
+        <button id="generateChart">Generate Chart</button>
+        <button id="updateSeating">Update Seating</button>
+
+        <div class="seating-chart" id="chart"></div>
+        
+        <!-- Input for custom file name -->
+        <div class="inputs">
+            <label for="fileName">Custom File Name (Without Extention):</label>
+            <input type="text" id="fileName" placeholder="SeatingChart">
+        </div>
+
+        <!-- Import/Export buttons -->
+        <div class="inputs">
+            <button id="exportFile">Export Seating Chart</button>
+            <input type="file" id="importFile" accept=".SEATCHART" />
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by Xander Hoover</p>
+    </footer>
+
+    <script src="SeatingChart.js"></script>
+</body>
+</html>
